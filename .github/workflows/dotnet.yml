@@ -52,7 +52,7 @@ jobs:
           username: hiwed70461-001
           password: hiwed70461-001
           local-dir: ./
-          server-dir: ./
+          server-dir: ./root/
           dangerous-clean-slate: true
 
   push_backend_to_docker:
