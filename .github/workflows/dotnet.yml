@@ -40,13 +40,10 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v3
-      
-      # - name: Download artifact from build job
-      #   uses: actions/download-artifact@v2
-      #   with:
-      #     name: publish
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: publish
 
       - name: aasa ${{ github.workspace }}
         run: ls -R
