@@ -45,14 +45,6 @@ jobs:
         with:
           name: publish
 
-      - uses: SamKirkland/web-deploy@v1
-        with:
-          target-server: https://win5045.site4now.net:8172/MsDeploy.axd?site=hiwed70461-001-site1
-          remote-user: hiwed70461-001
-          private-ssh-key: hiwed70461-001
-          destination-path: ./root/
-          source-path: ./
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -61,6 +53,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./root/
+          dangerous-clean-slate: true
 
   push_backend_to_docker:
     name: Push Backend
