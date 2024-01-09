@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish
+          path: ./publish
 
   web-deploy:
     needs: build
