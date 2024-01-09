@@ -29,11 +29,14 @@ jobs:
       - name: Publish
         run: dotnet publish -c Release -o ./publish
 
+      - name: ${{ github.workspace }}
+        run: ls -R
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ./publish
+          path: ${{ github.workspace }}/publish
 
   web-deploy:
     needs: build
