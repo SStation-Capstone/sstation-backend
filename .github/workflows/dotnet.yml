@@ -48,11 +48,11 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: shipperstation.somee.com/www.shipperstation.somee.com
+          username: savisa7168
+          password: savisa7168@talmetry.com
           local-dir: ./
-          server-dir: ./root/
+          server-dir: ./
           dangerous-clean-slate: true
 
   push_backend_to_docker:
