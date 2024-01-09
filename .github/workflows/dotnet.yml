@@ -53,6 +53,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./root/
+          dangerous-clean-slate: true
           dry-run: true
 
   push_backend_to_docker:
