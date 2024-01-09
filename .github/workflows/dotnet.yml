@@ -43,22 +43,22 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
       
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: publish
+      # - name: Download artifact from build job
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: publish
 
       - name: aasa ${{ github.workspace }}
         run: ls -R
       
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./publish/
-          server-dir: ./root/
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./publish/
+      #     server-dir: ./root/
 
   push_backend_to_docker:
     name: Push Backend 
