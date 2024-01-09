@@ -30,6 +30,7 @@ jobs:
         run: dotnet publish -c Release -o ./publish
 
   web-deploy:
+    needs: build
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
