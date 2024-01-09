@@ -48,9 +48,9 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: shipperstation.somee.com/www.shipperstation.somee.com
-          username: savisa7168
-          password: savisa7168@talmetry.com
+          server: win5045.site4now.net
+          username: hiwed70461-001
+          password: hiwed70461-001
           local-dir: ./
           server-dir: ./
           dangerous-clean-slate: true
