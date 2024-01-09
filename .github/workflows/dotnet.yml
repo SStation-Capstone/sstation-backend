@@ -45,6 +45,16 @@ jobs:
         with:
           name: publish
 
+      - name: Deploy to Simply
+        uses: rasmusbuchholdt/simply-web-deploy@2.1.0
+        with:
+          website-name: hiwed70461-001-site1
+          server-computer-name: https://win5045.site4now.net:8172
+          server-username: hiwed70461-001
+          server-password: hiwed70461-001
+          source-path: './'
+          target-path: '/root/'
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
