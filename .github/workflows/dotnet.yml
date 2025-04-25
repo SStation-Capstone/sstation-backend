@@ -95,3 +95,7 @@ jobs:
             "Authentication__Schemes__Bearer__RefreshTokenExpire=${{ secrets.Authentication__Schemes__Bearer__RefreshTokenExpire }}"
             "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}"
             "DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}"
+            "FTP_SERVER=${{ secrets.FTP_SERVER }}"
+            "FTP_USERNAME=${{ secrets.FTP_USERNAME }}"
+            "FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}"
+            "SERVER_DIR=${{ secrets.SERVER_DIR }}"
